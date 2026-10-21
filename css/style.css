@@ -1,0 +1,143 @@
+:root {
+    --color-primary: #007bff;
+    --color-primary-dark: #0056b3;
+    --color-success: #28a745;
+    --color-success-dark: #1e7e34;
+    --color-dark: #333;
+    --color-text: #212529;
+    --color-border: #e0e0e0;
+    --color-white: #fff;
+    --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+    --shadow-md: 0 8px 15px rgba(0,0,0,0.1);
+    --radius: 8px;
+    --transition: 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: var(--color-text);
+    background: url('../img/sportcar1.jpg') center/cover no-repeat fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header {
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 0;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header__logo a {
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.header__logo a:hover { color: var(--color-primary); }
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__link {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: var(--transition);
+}
+
+.header__link:hover { color: var(--color-primary); }
+
+.footer {
+    background: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid var(--color-border);
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer__links { display: flex; gap: 1rem; }
+.footer__link { color: var(--color-text); text-decoration: none; }
+.footer__link:hover { color: var(--color-primary); text-decoration: underline; }
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: var(--radius);
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn--primary { background: var(--color-primary); color: white; }
+.btn--primary:hover { background: var(--color-primary-dark); }
+
+.btn--success { background: var(--color-success); color: white; }
+.btn--success:hover { background: var(--color-success-dark); }
+
+.btn--outline {
+    background: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+.btn--outline:hover { background: var(--color-primary); color: white; }
+
+.btn--block { display: block; width: 100%; }
+
+.card {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+.card__header { padding: 1rem; background: #f8f9fa; border-bottom: 1px solid var(--color-border); }
+.card__body { padding: 1.5rem; text-align: center; }
+.card__image { max-width: 100%; height: auto; border-radius: var(--radius); }
+
+
+@media (max-width: 768px) {
+    .header__container { flex-direction: column; text-align: center; }
+    .header__actions { flex-direction: column; width: 100%; }
+    .header__link, .btn { width: 100%; } 
+    
+    .footer__content { flex-direction: column; text-align: center; }
+}

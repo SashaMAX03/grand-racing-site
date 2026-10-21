@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Вход и регистрация Grand Racing">
+    <title>Вход / Регистрация | Grand Racing</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body class="page-auth">
+
+    <header class="header">
+        <div class="container header__container">
+            <h1 class="header__logo">
+                <a href="../index.html">Grand Racing</a>
+            </h1>
+        </div>
+    </header>
+
+    <main class="main auth-main">
+        <div class="container">
+            <div class="card auth-card">
+                
+                <div id="registerBlock" class="auth-block">
+                    <h2 class="auth-title">Создать аккаунт</h2>
+                    <form id="registerForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="regName" class="form-label">Имя</label>
+                            <input type="text" id="regName" class="form-input" placeholder="Иван Иванов" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail" class="form-label">Email</label>
+                            <input type="email" id="regEmail" class="form-input" placeholder="example@mail.ru" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPassword" class="form-label">Пароль</label>
+                            <input type="password" id="regPassword" class="form-input" placeholder="Минимум 6 символов" required minlength="6">
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--block">Зарегистрироваться</button>
+                    </form>
+                    <p class="auth-switch">
+                        Уже есть аккаунт? <a href="#" id="toLoginLink">Войти</a>
+                    </p>
+                </div>
+
+                <div id="loginBlock" class="auth-block is-hidden">
+                    <h2 class="auth-title">Вход в аккаунт</h2>
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" id="loginEmail" class="form-input" placeholder="example@mail.ru" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword" class="form-label">Пароль</label>
+                            <input type="password" id="loginPassword" class="form-input" placeholder="Ваш пароль" required>
+                        </div>
+                        <button type="submit" class="btn btn--success btn--block">Войти</button>
+                    </form>
+                    <p class="auth-switch">
+                        Нет аккаунта? <a href="#" id="toRegisterLink">Зарегистрироваться</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+               
