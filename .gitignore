@@ -1,0 +1,17 @@
+# Системные файлы
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Папка с картинками (чтобы не грузить чужие фото)
+img/
+
+# Node.js (на будущее)
+node_modules/
+npm-debug.log
+
+# Редакторы кода
+.vscode/
+.idea/
+*.swp
+*.swo
